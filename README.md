@@ -22,36 +22,34 @@ Create the cell for tableview and inside the cell you have to create the labels 
 
 After that you have to implement the delegate and datasource like this below.
 ```
- func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+ func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int 
+ {
         return Name.count
-    }
+   }
     
-    // cell height
-    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+ func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat
+ {
         return UITableViewAutomaticDimension
-    }
+   }
     
-    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+ func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool 
+ {
         return true
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+ {
         
-        let cell = tableview.dequeueReusableCell(withIdentifier: "Cell", for: indexPath ) as! tableviewTableViewCell
+       let cell = tableview.dequeueReusableCell(withIdentifier: "Cell", for: indexPath ) as! tableviewTableViewCell
        
        cell.imageview.image = UIImage(named: fruitsimg[indexPath.row])
-        // connect objects with our information from arrays
-//        cell.usernameBtn.setTitle(usernameArray[indexPath.row], for: UIControlState.normal)
-//        cell.usernameBtn.sizeToFit()
-        
-        
-        cell.namelbl.text = Name[indexPath.row]
+       cell.namelbl.text = Name[indexPath.row]
         
         cell.timelbl.text = time[indexPath.row]
         return cell
     }
     
-    func tableView(_ tableView: UITableView,heightForRowAt indexPath: IndexPath) -> CGFloat
+ func tableView(_ tableView: UITableView,heightForRowAt indexPath: IndexPath) -> CGFloat
     {
         
         return 100
