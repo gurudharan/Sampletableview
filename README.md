@@ -12,7 +12,14 @@ First you have to create array Like this below.
                 "3:15PM", "2:15PM", "1:15PM", "9:15PM"]
 
 ```
-# Next you have create outlet for tableview.
+# Design
+
+Next you have create outlet for tableview.
+
+Create the cell for tableview and inside the cell you have to create the labels and imageview.
+
+* Create the Tableview cell file "tableviewTableViewCell.Swift"
+
 After that you have to implement the delegate and datasource like this below.
 ```
  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
